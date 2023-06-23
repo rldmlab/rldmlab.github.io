@@ -270,11 +270,11 @@ h6 {
     text-transform: uppercase;
 }
 a {
-    color: #000000;
+    color: #0053d6;
     text-decoration: none;
 }
 a:hover {
-    color: #004fff;
+    color: #a8caff;
     text-decoration: underline;
 }
 hr {
