@@ -480,3 +480,15 @@ figure img {
     max-width: 75%;
     padding-left: 3%;
 }
+
+
+@import url('https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@100;200&display=swap');
+p {
+  font-family: "Anek+Malayalam", sans-serif;
+}
+.thin100 {
+  font-weight: 100;
+}
+.thin200 {
+  font-weight: 200;
+}
