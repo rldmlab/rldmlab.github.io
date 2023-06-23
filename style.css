@@ -170,7 +170,7 @@ input[type="file"],
 input[type="datetime-local"],
 select,
 textarea {
-    border: 1px solid #595959;
+    border: 0px solid #595959;
     padding: 0.3375rem 0.39375rem;
 }
 input[type="checkbox"],
@@ -369,7 +369,7 @@ footer {
 }
 article {
     background: #fff;
-    border: 1px solid #d9d9d9;
+    border: 0px solid #d9d9d9;
 }
 nav {
     text-align: center;
