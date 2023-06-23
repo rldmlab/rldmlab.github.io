@@ -270,14 +270,15 @@ h6 {
     text-transform: uppercase;
 }
 a {
-    color: #275a90;
+    color: #000000;
     text-decoration: none;
 }
 a:hover {
+    color: #004fff;
     text-decoration: underline;
 }
 hr {
-    border-bottom: 1px solid #595959;
+    border-bottom: 0;
 }
 figcaption,
 small {
