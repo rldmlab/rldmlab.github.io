@@ -488,7 +488,11 @@ p {
 }
 .thin100 {
   font-weight: 100;
+    color: #0053d6;
+    font-size: 165%;
 }
 .thin200 {
   font-weight: 200;
+    color: #0053d6;
+    font-size: 120%;
 }
