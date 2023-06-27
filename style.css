@@ -497,5 +497,6 @@ p {
     font-size: 120%;
 }
 .image_resize {
-    width:60%;
+    max-width: 30%;
+    max-height: 30%;
 }
