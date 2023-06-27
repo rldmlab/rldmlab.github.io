@@ -496,6 +496,12 @@ p {
     color: #0042aa;
     font-size: 120%;
 }
+
+.thin300 {
+    font-weight: 200;
+    color: #0042aa;
+    font-size: 2rem;
+}
 .logo div {
     max-width: 99%;
     max-height: 99%;
