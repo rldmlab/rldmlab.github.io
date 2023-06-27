@@ -496,7 +496,7 @@ p {
     color: #0042aa;
     font-size: 120%;
 }
-.image_resize {
-    max-width: 30%;
-    max-height: 30%;
+.logo {
+    max-width: 99%;
+    max-height: 99%;
 }
