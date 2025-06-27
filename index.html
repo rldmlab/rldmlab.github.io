@@ -13,32 +13,58 @@
 
   
 
+
+
+
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    function attachToggleListeners() {
-      document.querySelectorAll(".personToggle").forEach(function (header) {
-        header.addEventListener("click", function () {
-          const entry = header.nextElementSibling;
-          if (entry && entry.classList.contains("personEntry")) {
-            entry.style.display = (entry.style.display === "block") ? "none" : "block";
-          }
-        });
+document.addEventListener("DOMContentLoaded", function () {
+
+  /* ========= Hamburger Menu ========= */
+  function initHamburger() {
+    const toggleButton = document.querySelector(".menu-toggle");
+    const menu = document.querySelector("ul.menu");
+    const links = document.querySelectorAll("ul.menu li a");
+    if (!toggleButton || !menu) { return; }
+
+    toggleButton.addEventListener("click", function () {
+      menu.classList.toggle("active");
+    });
+
+    // Close menu when a link is clicked
+    links.forEach(link => {
+      link.addEventListener("click", function () {
+        menu.classList.remove("active");
       });
+    });
+  }
+
+  /* ========= People Entry Toggle ========= */
+  function attachPersonToggleListeners() {
+    document.querySelectorAll(".personToggle").forEach(function (header) {
+      header.addEventListener("click", function () {
+        const entry = header.nextElementSibling;
+        if (entry && entry.classList.contains("personEntry")) {
+          entry.style.display = (entry.style.display === "block") ? "none" : "block";
+        }
+      });
+    });
+  }
+
+  // Initialize on first load
+  initHamburger();
+  attachPersonToggleListeners();
+
+  // Observe DOM mutations to re‑attach listeners after Alpine injects HTML
+  const observer = new MutationObserver(function (mutations) {
+    for (const m of mutations) {
+      if (m.addedNodes.length) {
+        attachPersonToggleListeners();
+      }
     }
-
-    // Run on first load
-    attachToggleListeners();
-
-    // Watch for Alpine content injection
-    const observer = new MutationObserver(function () {
-      attachToggleListeners();
-    });
-
-    observer.observe(document.body, {
-      childList: true,
-      subtree: true
-    });
   });
+
+  observer.observe(document.body, { childList: true, subtree: true });
+});
 </script>
 
 </head>
