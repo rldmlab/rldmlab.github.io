@@ -65,16 +65,27 @@ table tr th {
 }
 
 @media (min-width: 768px) {
-  .menu { display: flex !important; }
+  .hamburger { display: none; }
+  .menu {
+    display: flex !important;
+    gap: 6rem; /* spacing between menu items */
+  }
   nav li {
-    margin-left: 1rem;
-    margin-right: 1rem;
-    justify-content: center;     
+    display: inline-block;
+    margin-right: 6rem; /* spacing between menu items */
   }
   nav a {
+    padding: 5rem;
+    color: #0077cc; /* <-- change this to your preferred text color */
     text-decoration: none;
-    text-align: center;
   }
+}
+@media screen and (min-width: 768px) {
+    nav ul li {
+        color: #0077cc;
+        margin-left: 4rem; <!--20px;-->
+        margin-right: 4rem; <!--20px;-->
+    }
 }
 
 
