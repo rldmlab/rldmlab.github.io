@@ -69,13 +69,17 @@ table tr th {
   .menu { display: flex !important; }
   nav li {
     display: inline-block;
-    margin-right: 4rem; /* <-- increase spacing here */
+    margin-right: 4rem; /* spacing between menu items */
   }
-  nav a { padding: 2rem; }
+  nav a {
+    padding: 2rem;
+    color: #0077cc; /* <-- change this to your preferred text color */
+    text-decoration: none;
+  }
 }
-
 @media screen and (min-width: 768px) {
     nav ul li {
+        color: #0077cc;
         margin-left: 20px;
         margin-right: 20px;
     }
