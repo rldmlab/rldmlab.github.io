@@ -75,13 +75,21 @@ table tr th {
     color: #0077cc; /* <-- change this to your preferred text color */
     text-decoration: none;
   }
+  nav ul {
+    display: flex;
+    justify-content: center;   
+    gap: 2rem;                 
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
 }
 
 @media screen and (min-width: 768px) {
     nav ul li {
         color: #0077cc;
-        margin-left: 3rem; <!--20px;-->
-        margin-right: 3rem; <!--20px;-->
+        margin-left: 3rem; 
+        margin-right: 3rem; 
     }
 }
 
