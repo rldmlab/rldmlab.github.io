@@ -646,3 +646,11 @@ html {
   }
 }
 
+
+
+.personEntry {
+  display: none;
+}
+.personToggle {
+  cursor: pointer;
+}

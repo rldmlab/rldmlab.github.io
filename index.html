@@ -7,44 +7,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const toggleButton = document.querySelector(".menu-toggle");
-    const menu = document.querySelector("ul.menu");
-    const links = document.querySelectorAll("ul.menu li a");
 
-    toggleButton.addEventListener("click", function () {
-      menu.classList.toggle("active");
-    });
 
-    // Close menu when a link is clicked
-    links.forEach(link => {
-      link.addEventListener("click", function () {
-        menu.classList.remove("active");
-      });
-    });
-  });
-</script>
 
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  document.querySelectorAll(".personToggle").forEach(function (header) {
-    header.addEventListener("click", function () {
-      const entry = header.nextElementSibling;
-      if (entry && entry.classList.contains("personEntry")) {
-        if (entry.style.display === "block") {
-          entry.style.display = "none";
-        } else {
-          // first hide all entries except current? optional
-          entry.style.display = "block";
-        }
-      }
-    });
-  });
-});
-</script>
 
   
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    function attachToggleListeners() {
+      document.querySelectorAll(".personToggle").forEach(function (header) {
+        header.addEventListener("click", function () {
+          const entry = header.nextElementSibling;
+          if (entry && entry.classList.contains("personEntry")) {
+            entry.style.display = (entry.style.display === "block") ? "none" : "block";
+          }
+        });
+      });
+    }
+
+    // Run on first load
+    attachToggleListeners();
+
+    // Watch for Alpine content injection
+    const observer = new MutationObserver(function () {
+      attachToggleListeners();
+    });
+
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true
+    });
+  });
+</script>
+
 </head>
 <body>
   <section>
