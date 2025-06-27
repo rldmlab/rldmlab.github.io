@@ -79,13 +79,6 @@ table tr th {
   }
 }
 
-@media screen and (min-width: 768px) {
-    nav ul li {
-        color: #0053d6;
-        margin-left: 3rem; 
-        margin-right: 3rem; 
-    }
-}
 
 fieldset label,
 fieldset legend {
