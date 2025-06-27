@@ -87,10 +87,6 @@ table tr th {
         margin-left: 4rem; <!--20px;-->
         margin-right: 4rem; <!--20px;-->
     }
-    nav a:hover {
-      background-color: #f0f0f0;
-      width: 100%;
-    }
 }
 
 fieldset label,
