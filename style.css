@@ -63,6 +63,17 @@ table tr th {
         display: inline-block;
     }
 }
+
+@media (min-width: 768px) {
+  .hamburger { display: none; }
+  .menu { display: flex !important; }
+  nav li {
+    display: inline-block;
+    margin-right: 2rem; /* <-- increase spacing here */
+  }
+  nav a { padding: 1rem; }
+}
+
 fieldset label,
 fieldset legend {
     display: block;
@@ -372,26 +383,7 @@ article {
     background: #fff;
     border: 0;
 }
-nav {
-    text-align: center;
-}
-nav ul {
-    list-style: none;
-    margin-left: 0;
-    text-align: center;
-}
-nav ul li {
-    display: inline-block;
-    margin-left: 20px;
-    margin-right: 20px;
-    vertical-align: middle;
-}
-nav ul li:first-child {
-    margin-left: 0;
-}
-nav ul li:last-child {
-    margin-right: 0;
-}
+
 ol,
 ul {
     margin-left: 31.5px;
