@@ -610,3 +610,39 @@ html {
         margin: 0.5rem 0;
     }
 }
+
+
+/* ===== Hamburger Menu Font Size & Hide on Large Screens ===== */
+
+/* Reduce text size inside the hamburger menu on small screens */
+@media (max-width: 768px) {
+  nav ul.menu li a {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* On large screens, show horizontal menu and hide hamburger button */
+@media (min-width: 769px) {
+  .menu-toggle {
+    display: none;
+  }
+
+  nav ul.menu {
+    display: flex !important;
+    flex-direction: row;
+    gap: 2rem;
+    position: static;
+    background: none;
+    box-shadow: none;
+  }
+
+  nav ul.menu li {
+    margin: 0;
+  }
+
+  nav ul.menu li a {
+    font-size: 1.1rem;
+  }
+}
+
