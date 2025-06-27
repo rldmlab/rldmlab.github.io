@@ -68,7 +68,7 @@ table tr th {
   .menu { display: flex !important; }
   nav li {
     justify-content: center;   
-    gap: 3rem;      
+    gap: 10rem;      
   }
   nav a {
     padding: 5rem;
