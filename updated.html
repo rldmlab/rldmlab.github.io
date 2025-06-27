@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RLDM Lab</title>
+  <link rel="icon" type="image/png" href="./favicon.png">
+  <link rel="stylesheet" href="./style.css"/>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body>
+  <section>
+    <header style="position: relative;">
+      <nav style="display: flex; align-items: center; text-align: center; justify-content: center;">
+        <div class="logo"><img src="./logo.png"/></div>
+        <span style="vertical-align: top; text-align: left; padding-left: .5%;">
+            <p class="thin100"> Representation, Learning<br>and Decision making Lab </p>
+        </span>
+      </nav>
+
+      <!-- Hamburger button -->
+      <button class="hamburger" aria-label="Menu" onclick="document.body.classList.toggle('menu-open')">
+        &#9776;
+      </button>
+
+      <!-- Hamburger menu links -->
+      <nav id="main-nav">
+        <ul>
+          <li><a href="#about">about</a></li>
+          <li><a href="#people">people</a></li>
+          <li><a href="#publication">publication</a></li>
+          <li><a href="#contact">contact</a></li>
+          <li><a href="http://95.179.219.226/events" target="_blank">seminar</a></li>
+        </ul>
+      </nav>
+    </header>
+  </section>
+  <article>
+    <section id="about" x-data x-html="await (await fetch('about.html')).text()"></section>
+    <section id="people" x-data x-html="await (await fetch('people.html')).text()"></section>
+    <section id="publication" x-data x-html="await (await fetch('publication.html')).text()"></section>
+    <section id="contact" x-data x-html="await (await fetch('contact.html')).text()"></section>
+    <section id="DEI" x-data x-html="await (await fetch('DEI.html')).text()"></section>
+  </article>
+</body>
+</html>
