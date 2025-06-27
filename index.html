@@ -9,23 +9,7 @@
 
 
 
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  document.querySelectorAll(".personToggle").forEach(function (header) {
-    header.addEventListener("click", function () {
-      const entry = header.nextElementSibling;
-      if (entry && entry.classList.contains("personEntry")) {
-        if (entry.style.display === "block") {
-          entry.style.display = "none";
-        } else {
-          // first hide all entries except current? optional
-          entry.style.display = "block";
-        }
-      }
-    });
-  });
-});
-</script>
+
 
   
 
@@ -48,6 +32,32 @@ document.addEventListener("DOMContentLoaded", function () {
       const entry = header.nextElementSibling;
       if (entry && entry.classList.contains("personEntry")) {
         entry.style.display = (entry.style.display === "block") ? "none" : "block";
+      }
+    }
+  });
+});
+</script>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const toggleButton = document.querySelector(".menu-toggle");
+  const menu = document.querySelector("ul.menu");
+  if (toggleButton && menu) {
+    toggleButton.addEventListener("click", () => menu.classList.toggle("active"));
+    menu.addEventListener("click", e => {
+      if (e.target.tagName.toLowerCase() === "a") menu.classList.remove("active");
+    });
+  }
+
+  document.body.addEventListener("click", function (e) {
+    const header = e.target.closest(".personToggle");
+    if (header) {
+      const entry = header.nextElementSibling;
+      if (entry && entry.classList.contains("personEntry")) {
+        const isVisible = entry.style.display === "block";
+        entry.style.display = isVisible ? "none" : "block";
+        entry.classList.toggle("highlight", !isVisible);
       }
     }
   });
