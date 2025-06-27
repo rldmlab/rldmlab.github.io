@@ -661,12 +661,13 @@ html {
 
 /* Styles for Postdoctoral toggle header to look like hyperlink */
 #positions .personToggle {
-  color: #0053d6;            /* link blue */
+  color: #0042aa;            /* link blue */
   text-decoration: underline;
   cursor: pointer;
   display: inline-block;
 }
 
 #positions .personToggle:hover {
-  color: #d63384;            /* different color on hover */
+  background: #173454;
+  color: #bfbfbf; /* different color on hover color: #d63384;    */ 
 }
