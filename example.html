@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+      <meta charset="utf-8"/>
+      <meta content="ie=edge" http-equiv="x-ua-compatible"/>
+      <meta content="width=device-width, initial-scale=1" name="viewport"/>
+      <link href="https://html5-templates.com/" rel="canonical"/>
+      <title>S A Park</title>
+      <meta content="Simplified Bootstrap template with sticky menu" name="description"/>
+      <link href="css/bootstrap.min.css" rel="stylesheet"/>
+      <link href="css/sticky-menu.css" rel="stylesheet"/>
+</head>
+
+<body data-spy="scroll" data-target=".navbar-fixed-top" id="page-top">
+      <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                  <div class="navbar-header page-scroll">
+                        <button class="navbar-toggle collapsed" data-target="#mainNav" data-toggle="collapse" type="button">
+                              <span class="sr-only">Toggle navigation</span>
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand page-scroll" href="#page-top">Seongmin A Park</a>
+                  </div>
+
+                  <div class="collapse navbar-collapse navbar-ex1-collapse" id="mainNav">
+                        <ul class="nav navbar-nav">
+                              <li class="hidden">
+                                    <a class="page-scroll" href="#page-top"></a>
+                              </li>
+                              
+                              <li>
+                                    <a class="page-scroll" href="#Interests">Interests</a>
+                              </li>
+
+                              <li>
+                                    <a class="page-scroll" href="#Research">Research</a>
+                              </li>
+
+                              <!--
+                                <li>
+                                    <a class="page-scroll" href="#Publications">Publications</a>
+                                </li>
+                                -->
+                        </ul>
+                  </div> <!-- .navbar-collapse -->
+
+            </div> <!-- .container -->
+      </nav>
+
+<!-- Welcome   -->
+<article>
+    <section id="about" x-data x-html="await (await fetch('about.html')).text()"></section>
+    <section id="people" x-data x-html="await (await fetch('people.html')).text()"></section>
+    <section id="research" x-data x-html="await (await fetch('research.html')).text()"></section>
+    <section id="join" x-data x-html="await (await fetch('join.html')).text()"></section>
+</article>
