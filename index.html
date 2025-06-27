@@ -39,11 +39,11 @@
       <nav>
         <button class="menu-toggle">&#9776;</button> <!-- ☰ -->
         <ul class="menu">
-          <li><a href="#about">About</a></li>
-          <li><a href="#people">People</a></li>
-          <li><a href="#research">Publication</a></li>
-          <li><a href="#join">Contact</a></li>
-          <li><a href="#seminar">Seminar</a></li>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#people">PEOPLE</a></li>
+          <li><a href="#research">RESEARCH</a></li>
+          <li><a href="#positions">POSITIONS</a></li>
+          <li><a href="#contact">CONTACT</a></li>
         </ul>
       </nav>
       
@@ -62,9 +62,9 @@
   <article>
   <section id="about" x-data x-html="await (await fetch('about.html')).text()"></section>
   <section id="people" x-data x-html="await (await fetch('people.html')).text()"></section>
-  <section id="publication" x-data x-html="await (await fetch('publication.html')).text()"></section>
+  <section id="research" x-data x-html="await (await fetch('research.html')).text()"></section>
+  <section id="positions" x-data x-html="await (await fetch('positions.html')).text()"></section>
   <section id="contact" x-data x-html="await (await fetch('contact.html')).text()"></section>
-  <section id="DEI" x-data x-html="await (await fetch('DEI.html')).text()"></section>
   </section>
 </article>
 </body>
