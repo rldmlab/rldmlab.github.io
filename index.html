@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="./style.css"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script src="hamburger.js"></script>
 </head>
 <body>
   <section>
@@ -16,7 +17,18 @@
                 <p class="thin100"> Representation, Learning<br>and Decision making Lab </p>
             </span>
         </nav>
-    <nav>
+      <nav>
+        <button class="menu-toggle">&#9776;</button> <!-- ☰ -->
+        <ul class="menu">
+          <li><a href="#about">About</a></li>
+          <li><a href="#people">People</a></li>
+          <li><a href="#research">Publication</a></li>
+          <li><a href="#join">Contact</a></li>
+          <li><a href="#join">Seminar</a></li>
+        </ul>
+      </nav>
+      
+    <!-- <nav>
         <ul>
             <li><a href="#about">about</a></li>
             <li><a href="#people">people</a></li>
@@ -24,7 +36,8 @@
             <li><a href="#contact">contact</a></li>
             <li><a href="http://95.179.219.226/events" target="_blank">seminar</a></li>
         </ul>
-    </nav>
+    </nav> -->
+      
     </header>
   </section>
   <article>
