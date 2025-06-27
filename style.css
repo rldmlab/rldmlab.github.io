@@ -68,7 +68,7 @@ table tr th {
   .hamburger { display: none; }
   .menu {
     display: flex !important;
-    gap: 3rem; /* spacing between menu items */
+    gap: 5rem; /* spacing between menu items */
   }
   nav li {
     display: inline-block;
