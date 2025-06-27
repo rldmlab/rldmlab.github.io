@@ -67,7 +67,7 @@ table tr th {
 @media (min-width: 768px) {
   .menu { display: flex !important; }
   nav li {
-    display: inline-block;
+    
     margin-right: 6rem; /* spacing between menu items */
     justify-content: center;   
     gap: 2rem;      
