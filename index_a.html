@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CCN Lab</title>
+  <link rel=\"stylesheet\" href=\"./style.css\"/>
+  <script defer src=\"https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js\"></script>
+</head>
+<body>
+  <section>
+    <header class=\"site-header\">
+      <span class=\"lab-title\">
+        <p class=\"thin100\">Representation, Learning<br>and Decision making Lab</p>
+      </span>
+
+      <!-- Hamburger button always visible -->
+      <button class=\"hamburger\" id=\"hamburger\" aria-label=\"Menu\"
+              onclick=\"document.body.classList.toggle('menu-open')\">
+        &#9776;
+      </button>
+
+      <!-- Collapsible navigation list -->
+      <nav id=\"main-nav\">
+        <ul>
+          <li><a href=\"#about\">about</a></li>
+          <li><a href=\"#people\">people</a></li>
+          <li><a href=\"#research\">publication</a></li>
+          <li><a href=\"#join\">contact</a></li>
+        </ul>
+      </nav>
+    </header>
+  </section>
+
+  <article>
+    <section id=\"about\" x-data x-html=\"await (await fetch('about.html')).text()\"></section>
+    <section id=\"people\" x-data x-html=\"await (await fetch('people.html')).text()\"></section>
+    <section id=\"research\" x-data x-html=\"await (await fetch('research.html')).text()\"></section>
+    <section id=\"join\" x-data x-html=\"await (await fetch('join.html')).text()\"></section>
+  </article>
+</body>
+</html>
