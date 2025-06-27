@@ -74,14 +74,14 @@ table tr th {
   }
   nav a {
     padding: 3rem;
-    color: #6681be;
+    color: #0053d6;
     text-decoration: none;
   }
 }
 
 @media screen and (min-width: 768px) {
     nav ul li {
-        color: #6681be;
+        color: #0053d6;
         margin-left: 3rem; 
         margin-right: 3rem; 
     }
