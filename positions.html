@@ -2,7 +2,9 @@
 /* Collapsible people entries */
 .personEntry { display: none; }
 .personToggle { cursor: pointer; }
-</style><script>
+</style>
+
+<script>
 document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll(".personToggle").forEach(function (header) {
     header.addEventListener("click", function () {
@@ -18,7 +20,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
-</script><p class="thin300">People</p>
+</script>
+<p class="thin300">People</p>
 <h3 class="personToggle">Seongmin A. Park</h3>
 <div class="personEntry">
 <span class="profilePic">
