@@ -65,19 +65,25 @@ table tr th {
 }
 
 @media (min-width: 768px) {
-  .hamburger { display: none; }
   .menu { display: flex !important; }
   nav li {
     display: inline-block;
     margin-right: 6rem; /* spacing between menu items */
   }
   nav a {
-    padding: 5rem;
+    padding: 3rem;
     color: #0077cc; /* <-- change this to your preferred text color */
     text-decoration: none;
   }
 }
 
+@media screen and (min-width: 768px) {
+    nav ul li {
+        color: #0077cc;
+        margin-left: 3rem; <!--20px;-->
+        margin-right: 3rem; <!--20px;-->
+    }
+}
 
 fieldset label,
 fieldset legend {
