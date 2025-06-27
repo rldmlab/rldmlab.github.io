@@ -652,3 +652,8 @@ html {
   background-color: #fff9de;
   transition: background-color 0.3s ease;
 }
+
+
+/* ==== Scope collapsing entries only in positions section ==== */
+.personEntry { display: flex; }   /* default visible */
+#positions .personEntry { display: none; }   /* hide only in Positions section */
