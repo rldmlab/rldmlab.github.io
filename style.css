@@ -64,10 +64,9 @@ table tr th {
     }
 }
 
-
+@media (min-width: 768px) {
+  .menu { display: flex !important; }
   nav li {
-    margin-right: 3rem; /* spacing between menu items */
-    margin-left: 3rem; /* spacing between menu items */
     justify-content: center;   
     gap: 3rem;      
   }
@@ -76,6 +75,8 @@ table tr th {
     text-decoration: none;
     text-align: center;
   }
+}
+
 
 
 fieldset label,
