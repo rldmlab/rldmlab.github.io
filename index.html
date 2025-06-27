@@ -6,15 +6,17 @@
   <link rel="stylesheet" href="./style.css"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
   <script>
   document.addEventListener("DOMContentLoaded", function () {
-    const toggle = document.querySelector(".menu-toggle");
-    const menu = document.querySelector("nav ul.menu");
-    toggle.addEventListener("click", () => {
+    const toggleButton = document.querySelector(".menu-toggle");
+    const menu = document.querySelector("ul.menu");
+    toggleButton.addEventListener("click", function () {
       menu.classList.toggle("active");
     });
   });
 </script>
+  
 </head>
 <body>
   <section>
@@ -32,7 +34,7 @@
           <li><a href="#people">People</a></li>
           <li><a href="#research">Publication</a></li>
           <li><a href="#join">Contact</a></li>
-          <li><a href="#join">Seminar</a></li>
+          <li><a href="#seminar">Seminar</a></li>
         </ul>
       </nav>
       
