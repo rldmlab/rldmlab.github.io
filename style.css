@@ -64,11 +64,19 @@ table tr th {
     }
 }
 
-nav li {
-  margin-right: 2rem;  /* or smaller if needed */
-}
-nav a {
-  padding: 1.5rem;      /* shrink padding */
+@media (min-width: 768px) {
+  .menu { display: flex !important; }
+  nav li {
+    margin-right: 3rem; /* spacing between menu items */
+    margin-left: 3rem; /* spacing between menu items */
+    justify-content: center;   
+    gap: 3rem;      
+  }
+  nav a {
+    padding: 1rem;
+    text-decoration: none;
+    text-align: center;
+  }
 }
 
 fieldset label,
