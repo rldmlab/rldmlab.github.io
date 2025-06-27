@@ -80,6 +80,7 @@ table tr th {
 @media screen and (min-width: 768px) {
     nav ul li {
         color: #0077cc;
+        text-align: center;
         margin-left: 3rem; <!--20px;-->
         margin-right: 3rem; <!--20px;-->
     }
