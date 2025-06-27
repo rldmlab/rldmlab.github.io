@@ -74,6 +74,13 @@ table tr th {
   nav a { padding: 2rem; }
 }
 
+@media screen and (min-width: 768px) {
+    nav ul li {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
 fieldset label,
 fieldset legend {
     display: block;
