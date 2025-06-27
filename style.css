@@ -648,9 +648,44 @@ html {
 
 
 
+/* ===== Override for Always-visible Hamburger ===== */
+.menu-toggle {
+  display: block !important;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  padding: 0.5rem 1rem;
+}
+
+nav ul.menu {
+  display: none !important;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  position: absolute;
+  top: 3.5rem;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 1rem 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+nav ul.menu.active {
+  display: flex !important;
+}
+
+/* Ensure menu links look good */
+nav ul.menu li {
+  margin: 0.5rem 0;
+}
+
 .personEntry {
   display: none;
 }
+
 .personToggle {
   cursor: pointer;
 }

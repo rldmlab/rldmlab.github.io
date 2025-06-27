@@ -16,6 +16,9 @@
 
 
 
+
+
+
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -23,47 +26,45 @@ document.addEventListener("DOMContentLoaded", function () {
   function initHamburger() {
     const toggleButton = document.querySelector(".menu-toggle");
     const menu = document.querySelector("ul.menu");
-    const links = document.querySelectorAll("ul.menu li a");
     if (!toggleButton || !menu) { return; }
 
     toggleButton.addEventListener("click", function () {
       menu.classList.toggle("active");
     });
 
-    // Close menu when a link is clicked
-    links.forEach(link => {
-      link.addEventListener("click", function () {
+    // Close menu when a menu link is clicked
+    menu.addEventListener("click", function(e) {
+      if (e.target.tagName.toLowerCase() === "a") {
         menu.classList.remove("active");
-      });
-    });
-  }
-
-  /* ========= People Entry Toggle ========= */
-  function attachPersonToggleListeners() {
-    document.querySelectorAll(".personToggle").forEach(function (header) {
-      header.addEventListener("click", function () {
-        const entry = header.nextElementSibling;
-        if (entry && entry.classList.contains("personEntry")) {
-          entry.style.display = (entry.style.display === "block") ? "none" : "block";
-        }
-      });
-    });
-  }
-
-  // Initialize on first load
-  initHamburger();
-  attachPersonToggleListeners();
-
-  // Observe DOM mutations to re‑attach listeners after Alpine injects HTML
-  const observer = new MutationObserver(function (mutations) {
-    for (const m of mutations) {
-      if (m.addedNodes.length) {
-        attachPersonToggleListeners();
       }
-    }
-  });
+    });
+  }
 
-  observer.observe(document.body, { childList: true, subtree: true });
+  /* ========= Person Entry Toggle ========= */
+  function togglePersonEntry(evt) {
+    let header = evt.target.closest(".personToggle");
+    if (!header) return;
+
+    let entry = header.nextSibling;
+    // skip text nodes
+    while (entry && entry.nodeType !== 1) {
+      entry = entry.nextSibling;
+    }
+    if (entry && entry.classList.contains("personEntry")) {
+      entry.style.display = (entry.style.display === "block") ? "none" : "block";
+    }
+  }
+
+  function attachDelegatedListener() {
+    document.body.addEventListener("click", togglePersonEntry);
+  }
+
+  // Initialize once DOM is ready
+  initHamburger();
+  attachDelegatedListener();
+
+  // Observe DOM changes to ensure newly injected .personToggle headers work
+  // (event delegation handles it, but keep observer if future logic needed)
 });
 </script>
 
