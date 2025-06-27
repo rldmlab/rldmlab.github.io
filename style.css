@@ -67,8 +67,8 @@ table tr th {
 @media (min-width: 768px) {
   .menu { display: flex !important; }
   nav li {
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 1rem;
+    margin-right: 1rem;
     justify-content: center;     
   }
   nav a {
