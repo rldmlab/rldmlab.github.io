@@ -382,8 +382,8 @@ nav ul {
 }
 nav ul li {
     display: inline-block;
-    margin-left: 9px;
-    margin-right: 9px;
+    margin-left: 20px;
+    margin-right: 20px;
     vertical-align: middle;
 }
 nav ul li:first-child {
