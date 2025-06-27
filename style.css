@@ -68,14 +68,14 @@ table tr th {
   .hamburger { display: none; }
   .menu {
     display: flex !important;
-    gap: 5rem; /* spacing between menu items */
+    gap: 6rem; /* spacing between menu items */
   }
   nav li {
     display: inline-block;
-    margin-right: 4rem; /* spacing between menu items */
+    margin-right: 6rem; /* spacing between menu items */
   }
   nav a {
-    padding: 2rem;
+    padding: 5rem;
     color: #0077cc; /* <-- change this to your preferred text color */
     text-decoration: none;
   }
