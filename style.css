@@ -64,6 +64,13 @@ table tr th {
     }
 }
 
+nav li {
+  margin-right: 2rem;  /* or smaller if needed */
+}
+nav a {
+  padding: 1.5rem;      /* shrink padding */
+}
+
 fieldset label,
 fieldset legend {
     display: block;
