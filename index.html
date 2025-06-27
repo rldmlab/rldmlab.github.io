@@ -1,5 +1,40 @@
 <!DOCTYPE html>
 <html>
+
+<head>
+  <title>RLDM Lab</title>
+  <link rel="icon" type="image/png" href="./favicon.png">
+  <link rel="stylesheet" href="./style.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      /* === Hamburger Menu === */
+      const toggleButton = document.querySelector(".menu-toggle");
+      const menu = document.querySelector("ul.menu");
+      if (toggleButton && menu) {
+        toggleButton.addEventListener("click", () => menu.classList.toggle("active"));
+        menu.addEventListener("click", e => {
+          if (e.target.tagName.toLowerCase() === "a") menu.classList.remove("active");
+        });
+      }
+
+      /* === Toggle Person Entries === */
+      document.body.addEventListener("click", function (e) {
+        const header = e.target.closest(".personToggle");
+        if (header) {
+          const entry = header.nextElementSibling;
+          if (entry && entry.classList.contains("personEntry")) {
+            const isVisible = entry.style.display === "block";
+            entry.style.display = isVisible ? "none" : "block";
+            entry.classList.toggle("highlight", !isVisible);
+          }
+        }
+      });
+    });
+  </script>
+</head>
 <head>
   <title>RLDM Lab</title>
   <link rel="icon" type="image/png" href="./favicon.png">
