@@ -9,62 +9,48 @@
 
 
 
-
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".personToggle").forEach(function (header) {
+    header.addEventListener("click", function () {
+      const entry = header.nextElementSibling;
+      if (entry && entry.classList.contains("personEntry")) {
+        if (entry.style.display === "block") {
+          entry.style.display = "none";
+        } else {
+          // first hide all entries except current? optional
+          entry.style.display = "block";
+        }
+      }
+    });
+  });
+});
+</script>
 
   
 
-
-
-
-
-
-
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-
-  /* ========= Hamburger Menu ========= */
-  function initHamburger() {
-    const toggleButton = document.querySelector(".menu-toggle");
-    const menu = document.querySelector("ul.menu");
-    if (!toggleButton || !menu) { return; }
-
-    toggleButton.addEventListener("click", function () {
-      menu.classList.toggle("active");
+  /* === Hamburger Menu === */
+  const toggleButton = document.querySelector(".menu-toggle");
+  const menu = document.querySelector("ul.menu");
+  if (toggleButton && menu) {
+    toggleButton.addEventListener("click", () => menu.classList.toggle("active"));
+    menu.addEventListener("click", e => {
+      if (e.target.tagName.toLowerCase() === "a") menu.classList.remove("active");
     });
+  }
 
-    // Close menu when a menu link is clicked
-    menu.addEventListener("click", function(e) {
-      if (e.target.tagName.toLowerCase() === "a") {
-        menu.classList.remove("active");
+  /* === Toggle Person Entries === */
+  document.body.addEventListener("click", function (e) {
+    const header = e.target.closest(".personToggle");
+    if (header) {
+      const entry = header.nextElementSibling;
+      if (entry && entry.classList.contains("personEntry")) {
+        entry.style.display = (entry.style.display === "block") ? "none" : "block";
       }
-    });
-  }
-
-  /* ========= Person Entry Toggle ========= */
-  function togglePersonEntry(evt) {
-    let header = evt.target.closest(".personToggle");
-    if (!header) return;
-
-    let entry = header.nextSibling;
-    // skip text nodes
-    while (entry && entry.nodeType !== 1) {
-      entry = entry.nextSibling;
     }
-    if (entry && entry.classList.contains("personEntry")) {
-      entry.style.display = (entry.style.display === "block") ? "none" : "block";
-    }
-  }
-
-  function attachDelegatedListener() {
-    document.body.addEventListener("click", togglePersonEntry);
-  }
-
-  // Initialize once DOM is ready
-  initHamburger();
-  attachDelegatedListener();
-
-  // Observe DOM changes to ensure newly injected .personToggle headers work
-  // (event delegation handles it, but keep observer if future logic needed)
+  });
 });
 </script>
 
