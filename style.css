@@ -68,6 +68,7 @@ table tr th {
   .menu { display: flex !important; }
   nav li {
     margin-right: 6rem; /* spacing between menu items */
+    margin-left: 6rem; /* spacing between menu items */
     justify-content: center;   
     gap: 3rem;      
   }
