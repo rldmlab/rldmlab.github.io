@@ -67,8 +67,7 @@ table tr th {
 @media (min-width: 768px) {
   nav li {
     font-family: "Anek+Malayalam", sans-serif;
-    margin-right: 6rem; /* spacing between menu items */
-    margin-left: 6rem; /* spacing between menu items */
+    padding: 3rem;
     justify-content: center;   
     gap: 3rem;      
   }
