@@ -4,23 +4,7 @@
 .personToggle { cursor: pointer; }
 </style>
 
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  document.querySelectorAll(".personToggle").forEach(function (header) {
-    header.addEventListener("click", function () {
-      const entry = header.nextElementSibling;
-      if (entry && entry.classList.contains("personEntry")) {
-        if (entry.style.display === "block") {
-          entry.style.display = "none";
-        } else {
-          // first hide all entries except current? optional
-          entry.style.display = "block";
-        }
-      }
-    });
-  });
-});
-</script>
+
 <p class="thin300">People</p>
 <h3 class="personToggle">Seongmin A. Park</h3>
 <div class="personEntry">
