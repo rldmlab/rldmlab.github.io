@@ -657,3 +657,16 @@ html {
 /* ==== Scope collapsing entries only in positions section ==== */
 .personEntry { display: flex; }   /* default visible */
 #positions .personEntry { display: none; }   /* hide only in Positions section */
+
+
+/* Styles for Postdoctoral toggle header to look like hyperlink */
+#positions .personToggle {
+  color: #0053d6;            /* link blue */
+  text-decoration: underline;
+  cursor: pointer;
+  display: inline-block;
+}
+
+#positions .personToggle:hover {
+  color: #d63384;            /* different color on hover */
+}
