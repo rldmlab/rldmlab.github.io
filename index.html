@@ -7,12 +7,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
-  <script>
+<script>
   document.addEventListener("DOMContentLoaded", function () {
     const toggleButton = document.querySelector(".menu-toggle");
     const menu = document.querySelector("ul.menu");
+    const links = document.querySelectorAll("ul.menu li a");
+
     toggleButton.addEventListener("click", function () {
       menu.classList.toggle("active");
+    });
+
+    // Close menu when a link is clicked
+    links.forEach(link => {
+      link.addEventListener("click", function () {
+        menu.classList.remove("active");
+      });
     });
   });
 </script>
@@ -28,7 +37,7 @@
             </span>
         </nav>
       <nav>
-        <button class="menu-toggle">&#9776;<!-- ☰ -->
+        <button class="menu-toggle">&#9776;</button> <!-- ☰ -->
         <ul class="menu">
           <li><a href="#about">About</a></li>
           <li><a href="#people">People</a></li>
@@ -36,7 +45,6 @@
           <li><a href="#join">Contact</a></li>
           <li><a href="#seminar">Seminar</a></li>
         </ul>
-        </button> 
       </nav>
       
     <!-- <nav>
