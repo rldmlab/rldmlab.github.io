@@ -1,0 +1,64 @@
+<style>
+/* Collapsible people entries */
+.personEntry { display: none; }
+.personToggle { cursor: pointer; }
+</style><script>
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".personToggle").forEach(function (header) {
+    header.addEventListener("click", function () {
+      const entry = header.nextElementSibling;
+      if (entry && entry.classList.contains("personEntry")) {
+        if (entry.style.display === "block") {
+          entry.style.display = "none";
+        } else {
+          // first hide all entries except current? optional
+          entry.style.display = "block";
+        }
+      }
+    });
+  });
+});
+</script><p class="thin300">People</p>
+<h3 class="personToggle">Seongmin A. Park</h3>
+<div class="personEntry">
+<span class="profilePic">
+<img src="./images/Seongmin_Park.jpg"/>
+</span>
+<p>
+    CRCN (Chargé de recherche de classe normale) <br/> I am interested in gaining a better understanding of how the brain develops a structural representation of the relationships between entities (e.g., objects, people, and abstract task states) or hidden task structures from our everyday experiences and how these representations enable behavioral flexibility. I obtained my Ph.D. in Culture Technology from KAIST and subsequently worked as a postdoctoral researcher at CNRS and UC Davis. As a CRCN at the Institute of Cognitive Science in CNRS, my primary goal is to uncover the neural computational mechanisms that underlie learning, decision-making, and social interactions. <br/>
+<span><a href="./documents/cv2023.pdf" target="_blank">CV</a></span> -
+    <span><a href="https://argmaxv.github.io" target="_blank">web</a></span> -
+    <span><a href="https://twitter.com/SeongminAPark" target="_blank">twitter</a></span>
+</p>
+</div>
+<h3 class="personToggle">Inès Adrar</h3>
+<div class="personEntry">
+<span class="profilePic">
+<img src="./images/Ines_Adrar.png"/>
+</span>
+<p>
+    Postdoctoral research engineer<br/> I'm Inès. I recently obtained my PhD in Neuroscience and Plant Biology. My previous research revolved around studying the olfactory perception of the rose scent. I am now shifting my focus to cognitive neuroscience, the field in which I specialized, with a particular interest in its social aspects. I am intrigued by understanding human behavior, including how individuals integrate salient information, interact with their environment, and communicate with one another. Outside of my academic pursuits, I enjoy playing badminton, singing in a choir, and regularly attending the cinema. <br/>
+<span><a href="./documents/CV_Ines.pdf" target="_blank">CV</a></span>
+</p>
+</div>
+<h3 class="personToggle">Maxime Soula</h3>
+<div class="personEntry">
+<span class="profilePic">
+<img src="./images/Maxime_Soula.png"/>
+</span>
+<p>
+    Ph.D. student <br/> I am Maxime, and welcome to my profile! I hold a master's degree in Mathematical Engineering, with a specialization in modeling for neuronal and cognitive systems. The depth of the human experience fascinates me, particularly the evolution of behavior and our ability to comprehend the world through abstract generalizations. In addition to my academic pursuits, I find great joy in playing <a href="https://www.youtube.com/watch?v=kUYc71GeomY&amp;ab_channel=PeterLater" target="_blank">music</a> and savoring sunny days. <br/>
+<span></span>
+</p>
+</div>
+<!-- <h3>First and last Name</h3>
+<div class="personEntry">
+<span class="profilePic">
+    <img src="./images/photo.png">
+</span>
+<p>
+    Short introduction
+    <span><a href="./documents/cv.pdf" target="_blank">CV</a></span>
+    <span><a href="https://webpage.com" target="_blank">webpage</a></span>
+</p>
+</div> -->
