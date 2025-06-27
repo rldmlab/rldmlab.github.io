@@ -83,8 +83,13 @@ table tr th {
 @media screen and (min-width: 768px) {
     nav ul li {
         color: #0077cc;
+        width: 100%;
         margin-left: 4rem; <!--20px;-->
         margin-right: 4rem; <!--20px;-->
+    }
+    nav a:hover {
+      background-color: #f0f0f0;
+      width: 100%;
     }
 }
 
