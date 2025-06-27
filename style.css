@@ -63,9 +63,10 @@ table tr th {
         display: inline-block;
     }
 }
-
+@import url('https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@100;200&display=swap');
 @media (min-width: 768px) {
   nav li {
+    font-family: "Anek+Malayalam", sans-serif;
     margin-right: 6rem; /* spacing between menu items */
     margin-left: 6rem; /* spacing between menu items */
     justify-content: center;   
