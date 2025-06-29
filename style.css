@@ -510,10 +510,15 @@ p {
     font-size: 2rem;
 }
 .logo div {
-    max-width: 70%;
-    max-height: 70%;
+    max-width: 35%;
+    max-height: 35%;
 }
 
+.icon-image img {
+    max-width: 20%;
+    height: auto;
+    padding: 4vw;
+}
 
 /* ===== Centered horizontal nav menu ===== */
 nav {
