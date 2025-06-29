@@ -501,8 +501,8 @@ p {
 .thin100c {
   font-weight: 100;
     color: #0053d6;
-    font-size: 165%;
-    vertical-align: sub;
+    font-size: 180%;
+    vertical-align: middle;
     text-align: left;
     padding-left: .5%;
 }
