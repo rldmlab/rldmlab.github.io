@@ -477,14 +477,17 @@ figure img {
 
 .personEntry {
     display: flex;
+    padding-top: 2%;
     margin-bottom: 2%;
 }
 .personEntry .profilePic {
     max-width: 20%;
     padding-top: 2%;
+    margin-bottom: 2%;
 }
 .personEntry p {
-    max-width: 75%;
+    max-width: 85%;
+    padding-right: 3%;
     padding-left: 3%;
 }
 
