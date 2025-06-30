@@ -660,8 +660,8 @@ html {
 
 
 .personEntry.highlight {
-  background-color: #fff9de;
-  transition: background-color 0.3s ease;
+  background-color: #E6F0FF; /* #fff9de; */
+  transition: background-color 2s ease;
 }
 
 
